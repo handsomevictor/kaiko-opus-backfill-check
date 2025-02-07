@@ -1,0 +1,12 @@
+period,rate_type,exchanges_included,base_asset,calc_window,partition_size,start_time,end_time
+Q22013,real_time,"bfnx,mtgx,stmp,wexn",btc,300,30,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,real_time,"bfnx,mtgx,stmp,wexn",btc,300,30,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,real_time,bfnx,ltc,300,30,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,bfnx,ltc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,bfnx,ltc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,bfnx,ltc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00
+Q22013,index_fixing,bfnx,ltc,3600,360,2013-06-17 22:30:00+00:00,2013-09-23 22:30:00+00:00

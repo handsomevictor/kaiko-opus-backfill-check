@@ -1,0 +1,7 @@
+period,rate_type,exchanges_included,base_asset,calc_window,partition_size,start_time,end_time
+Q12012,real_time,"mtgx,wexn",btc,300,30,2012-03-19 22:30:00+00:00,2012-06-18 22:30:00+00:00
+Q12012,real_time,"mtgx,wexn",btc,300,30,2012-03-19 22:30:00+00:00,2012-06-18 22:30:00+00:00
+Q12012,index_fixing,"mtgx,wexn",btc,3600,360,2012-03-19 22:30:00+00:00,2012-06-18 22:30:00+00:00
+Q12012,index_fixing,"mtgx,wexn",btc,3600,360,2012-03-19 22:30:00+00:00,2012-06-18 22:30:00+00:00
+Q12012,index_fixing,"mtgx,wexn",btc,3600,360,2012-03-19 22:30:00+00:00,2012-06-18 22:30:00+00:00
+Q12012,index_fixing,"mtgx,wexn",btc,3600,360,2012-03-19 22:30:00+00:00,2012-06-18 22:30:00+00:00

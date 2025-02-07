@@ -1,0 +1,19 @@
+period,rate_type,exchanges_included,base_asset,calc_window,partition_size,start_time,end_time
+Q22015,real_time,polo,btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,real_time,"cbse,okcn,stmp",btc,20,2,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"cbse,okcn,stmp",btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,real_time,"cbse,okcn,stmp",btc,20,2,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"cbse,okcn,stmp",btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"cbse,okcn,stmp",btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"cbse,okcn,stmp",btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,real_time,"bfnx,btcc,cbse,okcn,wexn",btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,real_time,"bfnx,btcc,cbse,okcn,wexn",btc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,btcc,okcn,stmp,wexn",btc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,btcc,okcn,stmp,wexn",btc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,btcc,cbse,okcn,stmp",btc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,btcc,okcn,stmp,wexn",btc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,real_time,"bfnx,okcn",ltc,300,30,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,okcn",ltc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,okcn",ltc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,okcn",ltc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00
+Q22015,index_fixing,"bfnx,okcn",ltc,3600,360,2015-06-22 22:30:00+00:00,2015-09-21 22:30:00+00:00

@@ -1,0 +1,12 @@
+period,rate_type,exchanges_included,base_asset,calc_window,partition_size,start_time,end_time
+Q12014,real_time,"bfnx,mtgx,stmp,wexn",btc,300,30,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,real_time,"bfnx,mtgx,stmp,wexn",btc,300,30,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,mtgx,stmp,wexn",btc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,real_time,"bfnx,krkn",ltc,300,30,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,krkn",ltc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,krkn",ltc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,krkn",ltc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
+Q12014,index_fixing,"bfnx,krkn",ltc,3600,360,2014-03-17 22:30:00+00:00,2014-06-23 22:30:00+00:00
