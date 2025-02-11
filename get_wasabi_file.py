@@ -23,7 +23,7 @@ class DownloadSingleFileFromWasabi:
     By default, the file is downloaded from the path: index_v1/v1/simple/ticker_name/real_time/PT5S/
     """
 
-    def __init__(self, index_ticker, testing_date, real_time, bucket_name='indices-backfill'):
+    def __init__(self, index_ticker, testing_date, real_time, bucket_name='indices-backfill', print_log=True):
         self.s3 = boto3.client('s3',
                                endpoint_url='https://s3.us-east-2.wasabisys.com',
                                aws_access_key_id=aws_access_key_id,
@@ -32,6 +32,7 @@ class DownloadSingleFileFromWasabi:
         self.bucket_name = bucket_name.lower()
         self.index_ticker = index_ticker.lower()
         self.real_time = real_time
+        self.print_log = print_log
 
         # if the folder doesn't exist, create it
         if not os.path.exists(os.path.join(temp_database_dir, testing_date)):
@@ -57,14 +58,18 @@ class DownloadSingleFileFromWasabi:
         else:
             raise ValueError('real_time should be either True or False.')
 
-        print(f"Downloading {object_key} from {self.bucket_name} to {local_file_path}.")
+        if self.print_log:
+            print(f"Downloading {object_key} from {self.bucket_name} to {local_file_path}.")
+
         try:
             self.s3.download_file(self.bucket_name, object_key, local_file_path)
 
             with gzip.open(local_file_path, 'rb') as f_in:
                 with open(local_file_path[:-3], 'wb') as f_out:
                     shutil.copyfileobj(f_in, f_out)
-            print(f"File downloaded to {local_file_path[:-3]} and decompressed.")
+
+            if self.print_log:
+                print(f"File downloaded to {local_file_path[:-3]} and decompressed.")
 
         except NoCredentialsError:
             print("AWS credentials not found or incorrect.")
@@ -121,16 +126,29 @@ class DownloadSingleFileFromWasabi:
             return pd.DataFrame(columns=['intervalStart', 'intervalEnd', 'price', 'parameters'])
 
 
-if __name__ == '__main__':
-    bucket_name = 'indices-backfill'
-    index_ticker = 'kk_rfr_btcusd'
-    testing_date = '2024-07-01'
+def single_wasabi_file_download(index_ticker, testing_date, bucket_name='indices-backfill', print_log=True):
     is_real_time = True
     local_file_path = None
 
-    download_cli = DownloadSingleFileFromWasabi(index_ticker, testing_date, is_real_time, bucket_name)
+    download_cli = DownloadSingleFileFromWasabi(index_ticker, testing_date, is_real_time, bucket_name, print_log)
     download_cli.download_file(date=testing_date)
     download_cli.delete_file(gzip_file=False, csv_file=False, date=testing_date)
     data = download_cli.load_data_in_df(only_return_price_and_date=True, date=testing_date)
-    print(data.head())
-    print(data.columns)
+    data.drop(columns=['intervalStart', 'price'], inplace=True)
+
+    data['base_asset'] = data['parameters'].apply(lambda x: eval(x)[0]['asset'])
+    data['exchanges'] = data['parameters'].apply(lambda x: eval(x)[0]['exchanges'])
+    data['calc_window'] = data['parameters'].apply(lambda x: eval(x)[0]['calc_window'])
+    data['partition_size'] = data['parameters'].apply(lambda x: eval(x)[0]['partition_size'])
+    data.drop(columns=['parameters'], inplace=True)
+
+    data.to_csv('test_wasabi_raw_data.csv', index=False)
+    return data
+
+
+if __name__ == '__main__':
+    index_ticker = 'kk_rfr_btcusd'
+    testing_date = '2025-01-03'
+    bucket_name = 'indices-backfill'
+
+    single_wasabi_file_download(index_ticker, testing_date, bucket_name=bucket_name, print_log=False)
